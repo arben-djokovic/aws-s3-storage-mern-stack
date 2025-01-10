@@ -1,10 +1,10 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-import postRoutes from './routes/post.routes.js';
+import postRoutes from './backend/routes/post.routes.js';
 
 const app = express();
-dotenv.config({ path: '../.env' });
+dotenv.config();
  
 const mongoURI = process.env.MONGO_URI; 
 if (!mongoURI) {
