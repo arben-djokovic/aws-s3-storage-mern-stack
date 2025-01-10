@@ -1,6 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import postRoutes from './routes/post.routes.js';
 
 const app = express();
 dotenv.config({ path: '../.env' });
@@ -10,7 +11,7 @@ if (!mongoURI) {
     console.error("MONGO_URI is not defined in .env file");
     process.exit(1);
 }
-
+app.use(postRoutes)
 app.get('/', (req, res) => {
     res.send('Hello World 2 ss!'); 
 });
