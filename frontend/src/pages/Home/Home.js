@@ -11,7 +11,7 @@ export default function Home() {
     useEffect(() => {
         const getPosts = async () => {
             try{
-                const postsFetch = await axios.get('http://localhost:3000/')
+                const postsFetch = await axios.get('http://localhost:3000/api/posts')
                 setPosts(postsFetch.data)
             }catch(err){
                 console.log(err)

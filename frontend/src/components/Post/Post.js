@@ -16,7 +16,7 @@ export default function Post({ post }) {
           label: 'Yes',
           onClick: async() => {
             try{
-              const response = await axios.delete(`http://localhost:3000/${post._id}`)
+              const response = await axios.delete(`http://localhost:3000/api/posts/${post._id}`)
               if(response.data.success){
                 postRef.current.remove()
               }
