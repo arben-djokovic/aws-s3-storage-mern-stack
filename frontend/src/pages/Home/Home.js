@@ -11,7 +11,7 @@ export default function Home() {
     useEffect(() => {
         const getPosts = async () => {
             try{
-                const postsFetch = await axios.get('http://localhost:3000/api/posts')
+                const postsFetch = await axios.get('https://aws-s3-storage-mern-stack.onrender.com/api/posts')
                 setPosts(postsFetch.data)
             }catch(err){
                 console.log(err)

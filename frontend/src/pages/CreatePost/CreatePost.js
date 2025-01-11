@@ -11,7 +11,7 @@ export default function CreatePost() {
     const createPost = async () => {
         const formData = new FormData(formRef.current);
         try{
-            const response = await axios.post('http://localhost:3000/api/posts/add', formData, {
+            const response = await axios.post('https://aws-s3-storage-mern-stack.onrender.com/api/posts/add', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
