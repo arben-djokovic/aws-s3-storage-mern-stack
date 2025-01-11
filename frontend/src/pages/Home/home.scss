@@ -1,0 +1,25 @@
+.homePage{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+    .add{
+        padding: 10px 20px;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        width: fit-content;
+        &:hover{
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+            transform: scale(1.02);
+        }
+    }
+    .posts{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 120px);
+        grid-auto-flow: row dense;
+        gap: 20px;
+        padding: 20px;
+    }
+}

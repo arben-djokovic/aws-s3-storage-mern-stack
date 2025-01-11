@@ -1,14 +1,19 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home/Home';
+import CreatePost from './pages/CreatePost/CreatePost';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
 
   return (
     <div className="App">
-
-      <form action="http://localhost:3000/add" method="post" enctype="multipart/form-data">
-      <input type="file" name="image" id="image" />
-      <input type="text" name="caption" id="caption" />
-      <button type="submit">Submit</button>
-      </form>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/add-post" element={<CreatePost />} />
+        </Routes>
+      </Router>
+      <ToastContainer autoClose={1000} />
     </div>
   );
 }
